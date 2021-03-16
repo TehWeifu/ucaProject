@@ -6,7 +6,19 @@
 
 #IncludeRegexTransform: 
 
+<<<<<<< HEAD
 C:/Users/julian/source/repos/ucaProject/main.cpp
+=======
+C:/Users/julian/Documents/ucaProject/main.cpp
+winsock2.h
+-
+iphlpapi.h
+-
+icmpapi.h
+-
+cstdio
+-
+>>>>>>> 827d2407f32aa2eb5a4e49b46088b3604578be75
 iostream
 -
 string
