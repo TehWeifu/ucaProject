@@ -7,17 +7,7 @@
 #IncludeRegexTransform: 
 
 C:/Users/julian/source/repos/ucaProject/main.cpp
-winsock2.h
--
-iphlpapi.h
--
-icmpapi.h
--
-cstdio
--
 iostream
--
-map
 -
 string
 -
