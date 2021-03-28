@@ -1,4 +1,4 @@
-//#define _WINSOCK_DEPRECATED_NO_WARNINGS
+#define _WINSOCK_DEPRECATED_NO_WARNINGS
 
 #include <iostream>
 #include <fstream>
@@ -69,7 +69,7 @@ int IlumMonitor::export_devices() {
     if (!outDevicesFile) { return 0; }
 
     for (const auto& pc : devices) {
-        outDevicesFile << pc.first << ' ' << pc.second << std::endl;
+        outDevicesFile << '[' << pc.second << ']' << ' ' << pc.first << std::endl;
     }
 
     outDevicesFile.close();
@@ -84,7 +84,9 @@ int IlumMonitor::load() {
 
     if (!inDevicesFile) { return 0; }
 
-    while (inDevicesFile >> tmpName >> tmpIp) {
+    while (inDevicesFile >> tmpIp >> tmpName) {
+        tmpIp.erase(std::begin(tmpIp));
+        tmpIp.erase(std::end(tmpIp) - 1);
         devices.insert({ tmpName, tmpIp });
     }
 
