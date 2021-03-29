@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/ucaProject.dir/main.cpp.obj"
+  "libucaProject.dll.a"
   "ucaProject.exe"
   "ucaProject.exe.manifest"
-  "ucaProject.lib"
   "ucaProject.pdb"
 )
 
